@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Heureux",
+    "description": "Etre heureux ça s'entretient ! Se sentir comme un nuage, dans le bien-être totale"
+  },
+  {
+    "id": 2,
+    "name": "Calme",
+    "description": "Esprit apaisé qui permet de profiter pleinement de soins"
+  },
+  {
+    "id": 3,
+    "name": "Fatigué",
+    "description": "Corps lourd et démotivation pour tout"
+  },
+  {
+    "id": 4,
+    "name": "Anxieux",
+    "description": "Se sentir dans un état bridé qui paralyse nos émotions et donc nos choix"
+  },
+  {
+    "id": 5,
+    "name": "Mélancolique",
+    "description": "Nostalgique de moments passés alors qu'il faut avancer"
+  },
+  {
+    "id": 6,
+    "name": "Malheureux",
+    "description": "Avoir l'esprit triste, vide de sens"
+  },
+  {
+    "id": 7,
+    "name": "Angoissé",
+    "description": "Stressé, corps un peu bloqué avec l'esprit qui travaille beaucoup"
+  }
+]

@@ -5,6 +5,7 @@ import database from "../client/client";
 
 import Client from "../client";
 
+import citiesData from "./static-data/city-data.json";
 import conditionsData from "./static-data/condition-data.json";
 import caresData from "./static-data/care-data.json";
 import placesData from "./static-data/place-data.json";
@@ -31,12 +32,21 @@ const seed = async () => {
   //   await client.conditions.create(conditionsData[i]);
   // }
   // Pour de meilleur performance, on utiliserait une fonction createMany pour faire une seul insertion à la place de plusieurs create comme ceux-ci
-  conditionsData.forEach(async (value) => client.conditions.create(value));
-  caresData.forEach(async (value) => client.cares.create(value));
-  placesData.forEach(async (value) => client.places.create(value));
-  carePlaceData.forEach(async (value) => client.carePlace.create(value));
-  conditionCareData.forEach(async (value) =>
-    client.conditionCareData.create(value)
+  await Promise.all(
+    citiesData.map(async (value) => client.cities.create(value))
+  );
+  await Promise.all(
+    conditionsData.map(async (value) => client.conditions.create(value))
+  );
+  await Promise.all(caresData.map(async (value) => client.cares.create(value)));
+  await Promise.all(
+    placesData.map(async (value) => client.places.create(value))
+  );
+  await Promise.all(
+    carePlaceData.map(async (value) => client.carePlace.create(value))
+  );
+  await Promise.all(
+    conditionCareData.map(async (value) => client.conditionCare.create(value))
   );
 
   // 1ère étape

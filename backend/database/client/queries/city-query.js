@@ -8,10 +8,7 @@ export default class {
 
   create = async (city) => {
     const [results] = await this.client
-      .query(`INSERT INTO ${this.table} (name, description) VALUES (?,?)`, [
-        city.name,
-        city.description,
-      ])
+      .query(`INSERT INTO ${this.table} (name) VALUES (?)`, [city.name])
       .catch((err) => {
         return err;
       });

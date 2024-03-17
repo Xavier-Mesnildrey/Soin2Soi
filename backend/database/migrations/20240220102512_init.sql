@@ -30,13 +30,13 @@ CREATE TABLE `care_place` (
 CREATE TABLE `places` (
   `id` integer AUTO_INCREMENT PRIMARY KEY,
   `name` varchar(255),
-  `description` varchar(255),
+  `description` text,
   `city_id` integer
 );
 
 CREATE TABLE `cities` (
   `id` integer AUTO_INCREMENT PRIMARY KEY,
-  `name` varchar(255),
+  `name` varchar(255)
 );
 
 ALTER TABLE `condition_care` ADD FOREIGN KEY (`condition_id`) REFERENCES `conditions` (`id`);

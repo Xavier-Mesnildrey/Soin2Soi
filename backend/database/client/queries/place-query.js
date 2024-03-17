@@ -7,14 +7,10 @@ export default class {
   }
 
   create = async (place) => {
-    const [results] = await this.client
-      .query(
-        `INSERT INTO ${this.table} (name, description, city_id) VALUES (?,?,?)`,
-        [place.name, place.description, place.city_id]
-      )
-      .catch((err) => {
-        return err;
-      });
+    const [results] = await this.client.query(
+      `INSERT INTO ${this.table} (name, description, city_id) VALUES (?,?,?)`,
+      [place.name, place.description, place.city_id]
+    );
     return results;
   };
 

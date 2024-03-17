@@ -27,9 +27,5 @@
     "nodemon": "^3.0.1",
     "prettier": "^3.0.0",
     "supertest": "^6.3.3"
-  },
-  "lint-staged": {
-    "*.sql": "prettier --check",
-    "*.js": "eslint"
   }
 }

@@ -1,0 +1,38 @@
+[
+  {
+    "careId": 1,
+    "placeId": 2
+  },
+  {
+    "careId": 2,
+    "placeId": 1
+  },
+  {
+    "careId": 4,
+    "placeId": 3
+  },
+  {
+    "careId": 5,
+    "placeId": 1
+  },
+  {
+    "careId": 6,
+    "placeId": 4
+  },
+  {
+    "careId": 7,
+    "placeId": 5
+  },
+  {
+    "careId": 8,
+    "placeId": 1
+  },
+  {
+    "careId": 8,
+    "placeId": 2
+  },
+  {
+    "careId": 9,
+    "placeId": 7
+  }
+]

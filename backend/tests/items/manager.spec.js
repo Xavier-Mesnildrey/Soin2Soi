@@ -13,12 +13,12 @@ describe("Create item", () => {
     const insertId = await tables.item.create(testItem);
 
     // Check if the newly added item exists in the database
-    const [rows] = await database.query(
+    const [results] = await database.query(
       "select * from item where id = ?",
       insertId
     );
 
-    const foundItem = rows[0];
+    const foundItem = [results][0];
 
     // Assertions
     expect(foundItem).toBeDefined();

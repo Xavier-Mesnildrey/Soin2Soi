@@ -1,13 +1,12 @@
 CREATE TABLE `users` (
   `id` varchar(255) PRIMARY KEY default(uuid()),
   `username` varchar(255),
-  `email` varchar(255) unique not null,
-  `hashed_password` text not null,
-  `is_administrator` boolean not null
+  `mail` varchar(255),
+  `password` varchar(255)
 );
 
 CREATE TABLE `conditions` (
-  `id` integer PRIMARY KEY,
+  `id` integer AUTO_INCREMENT PRIMARY KEY,
   `name` varchar(255),
   `description` text
 );
@@ -18,7 +17,7 @@ CREATE TABLE `condition_care` (
 );
 
 CREATE TABLE `cares` (
-  `id` integer PRIMARY KEY,
+  `id` integer AUTO_INCREMENT PRIMARY KEY,
   `name` varchar(255),
   `description` text
 );
@@ -29,16 +28,15 @@ CREATE TABLE `care_place` (
 );
 
 CREATE TABLE `places` (
-  `id` integer PRIMARY KEY,
+  `id` integer AUTO_INCREMENT PRIMARY KEY,
   `name` varchar(255),
   `description` varchar(255),
   `city_id` integer
 );
 
 CREATE TABLE `cities` (
-  `id` integer PRIMARY KEY,
+  `id` integer AUTO_INCREMENT PRIMARY KEY,
   `name` varchar(255),
-  `description` text
 );
 
 ALTER TABLE `condition_care` ADD FOREIGN KEY (`condition_id`) REFERENCES `conditions` (`id`);

@@ -1,42 +1,31 @@
-import Counter from "./components/Counter";
-import logo from "./assets/logo.svg";
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./App.scss"
+import Login from "./pages/Login";
+import Home from "./pages/Home";
+import Register from "./pages/Register";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React !</p>
+import { CookiesProvider } from "react-cookie";
 
-        <Counter />
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Login />,
+  },
+  {
+    path: "/accueil",
+    element: <Home />,
+  },
+  {
+    path: "/inscription",
+    element: <Register />,
+  },
+]);
 
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {" | "}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <CookiesProvider>
+    <RouterProvider router={router} />
+  </CookiesProvider>
+);

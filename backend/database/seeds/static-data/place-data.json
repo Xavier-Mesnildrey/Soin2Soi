@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "name": "Centre L'ôdyssée",
+    "description": "Soins multiples - L'Ôdyssée est un centre pluridisciplinaire qui fait le choix de miser sur la médecine intégrative. Qu'il soit question de vous occuper d'un problème déjà installé, d'anticiper un trouble à venir ou simplement de maintenir votre équilibre, L'Ôdyssée réunit plusieurs disciplines pour vous permettre d'atteindre ces objectifs. De la flottaison en isolation sensorielle en passant par le bien-être et les soins, vous serez accompagné par une équipe de professionnels passionnés prêts à mettre à votre disposition leurs savoir-faire, leurs compétences et leur bienveillance.",
+    "city_id": 1
+  },
+  {
+    "id": 2,
+    "name": "Espace Relaxation",
+    "description": "Soins multiples - Nous proposons des techniques naturelles et holistiques, prodiguées en cabinet ou à domicile pour tous : enfants, adultes, séniors, futures mamans, sportifs, étudiants.... afin de vous aider à rééquilibrer vos énergies internes et systèmes vitaux en suivant des techniques de médecines traditionnelles asiatique et Indienne ainsi que de la Sophrologie pour vous aider à retrouver la paix mentale et physique On vous souhaite une bonne visite.",
+    "city_id": 1
+  },
+  {
+    "id": 3,
+    "name": "Hammam Kafane",
+    "description": "Salon de massage - Entrez dans l'univers du hammam kafane, le temps d'une pause invitant au voyage... Découvrez un véritable hammam sur 200 m2. Plusieurs soins vous sont proposés : rituels hammams, gommages au savon noir, modelages à 4 mains, soins du visage berbère, soins du dos Sahara... L'établissement est mixte et le maillot de bain obligatoire.",
+    "city_id": 1
+  },
+  {
+    "id": 4,
+    "name": "Hypnose 40 Chateaux Favennec",
+    "description": "Hypnose - Qui n'a pas rencontré des problèmes dans sa vie, des remises en question, ressenti un mal être, vécu des situations traumatisantes et perturbantes ? Cette impression où plus rien ne va, où nous ne maîtrisons plus les événements. Où tout nous échappe. Tel un navire sur une mer démontée, nous nous laissons dériver au gré des courants, vers une destination qui n'est pas la notre. Alors, le choix de suivre une thérapie peut s'imposer. Cette décision est le premier pas, pour accéder à votre mieux être.",
+    "city_id": 1
+  },
+  {
+    "id": 5,
+    "name": "Les Jardins d'Anahata",
+    "description": "Réflexologie - Je ne fais pas de diagnostic médical, je respecte celui apporté par mon bénéficiaire et m'y réfère. Je respecte le secret professionnel et poursuis mes formations pour préserver la qualité de mes soins.",
+    "city_id": 1
+  },
+  {
+    "id": 6,
+    "name": "Sonia harmonie bien-être",
+    "description": "Magnétisme - Venez découvrir votre corps avec un massage, un soin énergétique. Un moment hors du temps qui vous ressource en profondeur. Un fabuleux voyage à la rencontre de vos sens qui vous permettra de découvrir qui vous êtes et les potentiels qui sommeillent en vous ! Parfois il suffit juste de regarder les choses avec la simplicité du cœur. Révélons votre jolie lumière pour rayonner au quotidien.",
+    "city_id": 1
+  },
+  {
+    "id": 7,
+    "name": "Onde",
+    "description": "Thérapeute au Tambour - Nous avons tous le même but inconscient. Celui de vivre en accord avec notre véritable nature",
+    "city_id": 2
+  },
+  {
+    "id": 8,
+    "name": "Adam'Nature",
+    "description": "Naturopathie - Mes compétences médicales associées aux techniques naturopathiques Pays Basque vous apportent des solutions pour vous sentir mieux, soulager vos douleurs, résoudre vos désordres d’ordre physique ou émotionnel. Je vous reçois dans mon cabinet de naturopathie à Bayonne et je me déplace à votre domicile pour des consultations de naturopathie au Pays Basque et dans le Sud des Landes.",
+    "city_id": 3
+  },
+  {
+    "id": 9,
+    "name": "Le baptisme magnétisme",
+    "description": "Magnétisme - Je propose mes services pour apaiser, rééquilibrer et soigner les centres énergétiques: magnétisme",
+    "city_id": 3
+  },
+  {
+    "id": 10,
+    "name": "Magnétisme&Litho&Energies",
+    "description": "Magnétisme - Au service de votre bien-être",
+    "city_id": 3
+  },
+  {
+    "id": 11,
+    "name": "La Magie du Son",
+    "description": "Bols Tibétain - La Magie du Son ou Sonothérapie Pays Basque est le résultat de toute une vie riche d'expériences, d'apprentissages, de pratiques et de 20 années de voyages à l'autre bout du monde, de rencontres passionnantes et intenses avec des femmes et des hommes qui utilisent le chant, la voix et certains instruments de musique.",
+    "city_id": 3
+  },
+  {
+    "id": 12,
+    "name": "Esprit Libre 64",
+    "description": "Hypnose - Vous reçoit à son cabinet pour des séances d'hypnose afin de vous accompagner pour traiter notamment des problèmes de dépendances (tabac, alimentation), d'anxiété, de phobie, troubles du sommeil ou bien d'autres, etc.",
+    "city_id": 3
+  },
+  {
+    "id": 13,
+    "name": "jm2lreflex",
+    "description": "Réflexologie - La réflexologie, est une science qui part du principe qu'il y a dans les pieds des points ou des zones réflexes qui correspondent à tous les organes, toutes les glandes et toutes des parties de notre corps.",
+    "city_id": 3
+  }
+]

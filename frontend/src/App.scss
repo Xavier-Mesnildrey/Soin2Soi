@@ -1,0 +1,55 @@
+@import "./assets/variables.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(assets/background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  @media screen and (max-width: 580px) {
+    background-position: right;
+  }
+}
+
+.textarea {
+  background: $colorGrey;
+  border: $border;
+  padding: $paddingT;
+  border-radius: $br;
+  font-size: $font09;
+  &::placeholder {
+    color: $colorBlackTrans;
+  }
+  &:focus-visible {
+    outline-color: $colorBlack;
+    box-shadow: $shadow;
+  }
+}
+
+.btn {
+  color: $colorBlack;
+  border: $border;
+  background: $colorGrey;
+  font-size: $font1;
+  padding: $paddingT;
+  border-radius: $br;
+
+  &:hover {
+    box-shadow: $shadow;
+  }
+}
+
+.welcome {
+  font-size: clamp(2.1rem, 5vw, 2.4rem);
+  font-weight: 900;
+}
+
+h2 {
+  font-size: $font13;
+}

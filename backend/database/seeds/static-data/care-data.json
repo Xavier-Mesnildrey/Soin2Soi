@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Yoga",
+    "description": "Détend le corps et l'esprit en l'étirant, revenir sur soi"
+  },
+  {
+    "id": 2,
+    "name": "Méditation",
+    "description": "Se recentrer sur soi en ne bougeant plus"
+  },
+  {
+    "id": 3,
+    "name": "Naturopathie",
+    "description": "Se détendre et se soigner par les plantes"
+  },
+  {
+    "id": 4,
+    "name": "Massage",
+    "description": "Détendre son corps c'est détendre l'esprit"
+  },
+  {
+    "id": 5,
+    "name": "Bols Tibétains",
+    "description": "séance de bols oblige la détente de l'âme"
+  },
+  {
+    "id": 6,
+    "name": "Hypnose",
+    "description": "Enlève les dépendances et traumatisme"
+  },
+  {
+    "id": 7,
+    "name": "Réflexogie",
+    "description": "Soignes tous les organes"
+  },
+  {
+    "id": 8,
+    "name": "Magnétisme",
+    "description": "Ressources et élimines les douleurs du corps et de l'esprit"
+  },
+  {
+    "id": 9,
+    "name": "Thérapeute au tambour",
+    "description": "Recentrer ses énergies avec l'esprit"
+  }
+]

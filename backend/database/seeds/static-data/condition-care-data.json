@@ -1,0 +1,86 @@
+[
+  {
+    "conditionId": 1,
+    "careId": 1
+  },
+  {
+    "conditionId": 1,
+    "careId": 3
+  },
+  {
+    "conditionId": 1,
+    "careId": 4
+  },
+  {
+    "conditionId": 2,
+    "careId": 2
+  },
+  {
+    "conditionId": 3,
+    "careId": 2
+  },
+  {
+    "conditionId": 3,
+    "careId": 3
+  },
+  {
+    "conditionId": 3,
+    "careId": 8
+  },
+  {
+    "conditionId": 4,
+    "careId": 4
+  },
+  {
+    "conditionId": 4,
+    "careId": 6
+  },
+  {
+    "conditionId": 4,
+    "careId": 8
+  },
+  {
+    "conditionId": 4,
+    "careId": 9
+  },
+  {
+    "conditionId": 5,
+    "careId": 2
+  },
+  {
+    "conditionId": 5,
+    "careId": 4
+  },
+  {
+    "conditionId": 5,
+    "careId": 6
+  },
+  {
+    "conditionId": 6,
+    "careId": 2
+  },
+  {
+    "conditionId": 6,
+    "careId": 8
+  },
+  {
+    "conditionId": 7,
+    "careId": 3
+  },
+  {
+    "conditionId": 7,
+    "careId": 5
+  },
+  {
+    "conditionId": 7,
+    "careId": 6
+  },
+  {
+    "conditionId": 7,
+    "careId": 8
+  },
+  {
+    "conditionId": 7,
+    "careId": 9
+  }
+]

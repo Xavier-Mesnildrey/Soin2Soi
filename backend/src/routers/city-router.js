@@ -1,15 +1,14 @@
 import { Router } from "express";
-import CityController from "../controllers/city-controller";
-
-const cityController = new CityController();
+import { cityController } from "../controllers";
+import { authService } from "../services";
 
 const router = Router();
 
 // cares
-router.post("/city", cityController.create);
-router.get("/cities", cityController.findAll);
-router.get("/cities/:id", cityController.findOne);
-router.put("/cities/:id", cityController.updateOne);
-router.delete("/cities/:id", cityController.deleteOne);
+router.post("/city", authService.validate, cityController.create);
+router.get("/cities", authService.validate, cityController.findAll);
+router.get("/cities/:id", authService.validate, cityController.findOne);
+router.put("/cities/:id", authService.validate, cityController.updateOne);
+router.delete("/cities/:id", authService.validate, cityController.deleteOne);
 
 export default router;

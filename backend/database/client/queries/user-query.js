@@ -6,14 +6,14 @@ export default class {
     this.client = client;
   }
 
-  create = async (user) => {
+  create = async ({ username, email, hashedPassword }) => {
     const [results] = await this.client
       .query(
-        `INSERT INTO ${this.table} (userName, email, hashed_password, is_administrator) VALUES (?,?,?,?)`,
-        [user.username, user.email, user.hashedPassword]
+        `INSERT INTO ${this.table} (username, email, password) VALUES (?,?,?)`,
+        [username, email, hashedPassword]
       )
       .catch((err) => {
-        return err;
+        throw new Error(err.message);
       });
     return results;
   };
@@ -24,7 +24,7 @@ export default class {
       .catch((err) => {
         console.error(err);
       });
-    return results;
+    return results[0];
   };
 
   findByEmail = async (email) => {
@@ -33,7 +33,7 @@ export default class {
       .catch((err) => {
         console.error(err);
       });
-    return results;
+    return results[0];
   };
 
   findAll = async () => {

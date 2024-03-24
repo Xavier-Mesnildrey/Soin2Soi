@@ -1,3 +1,4 @@
+import bcrypt from "bcrypt";
 import Client from "../../database/client";
 
 export default class {
@@ -6,8 +7,22 @@ export default class {
   }
 
   // Create users
-  async createOne(user) {
-    const results = await this.client.users.create(user);
+  async createOne({ username, email, password }) {
+    // On vérifie que toutes les données nécessaire à la création de l'utilisateur soit fourni
+    if (!username || !email || !password) {
+      throw new Error("Missing user information");
+    }
+
+    // On doit crypter le mot de passe stocker en base de données
+    const results = await this.client.users.create({
+      username,
+      email,
+      hashedPassword: bcrypt.hashSync(password, 10),
+    });
+    if (!results.affectedRows) {
+      throw new Error("Error while inserted user");
+    }
+
     return results;
   }
 

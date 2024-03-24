@@ -26,12 +26,6 @@ const seed = async () => {
   await database.query("DELETE FROM places");
 
   // Insérer données dans table
-  // [] => array.map / array.forEach / array.push
-  // {} => object.Entries();
-  // for (let index = 0; index < conditionsData.length; index++) {
-  //   await client.conditions.create(conditionsData[i]);
-  // }
-  // Pour de meilleur performance, on utiliserait une fonction createMany pour faire une seul insertion à la place de plusieurs create comme ceux-ci
   await Promise.all(
     citiesData.map(async (value) => client.cities.create(value))
   );

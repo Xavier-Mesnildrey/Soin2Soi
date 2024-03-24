@@ -1,15 +1,15 @@
-import UserService from "../services/user-service";
+import { userService } from "../services";
 
 export default class {
   constructor() {
-    this.service = new UserService();
+    this.service = userService;
   }
 
   create = async (req, res, next) => {
     const { body } = req;
-    const { id } = await this.service.createOne(body).catch((err) => next(err));
+    await this.service.createOne(body).catch((err) => next(err));
 
-    return res.status(201).json({ id });
+    return next();
   };
 
   findAll = async (_req, res, next) => {

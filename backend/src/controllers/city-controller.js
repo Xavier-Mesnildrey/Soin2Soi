@@ -1,8 +1,8 @@
-import CityService from "../services/city-service";
+import { cityService } from "../services";
 
 export default class {
   constructor() {
-    this.service = new CityService();
+    this.service = cityService;
   }
 
   create = async (req, res, next) => {

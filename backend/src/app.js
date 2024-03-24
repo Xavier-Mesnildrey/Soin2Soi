@@ -1,5 +1,6 @@
 import "dotenv/config";
 import express from "express";
+import cors from "cors";
 
 import {
   careRouter,
@@ -10,6 +11,10 @@ import {
 } from "./routers";
 
 const app = express();
+
+app.use(cors());
+
+app.use(express.json());
 
 app.use("/api", userRouter);
 app.use("/api", careRouter);

@@ -1,0 +1,33 @@
+@import "../../assets/variables.scss";
+
+.login-out-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+
+  @media screen and (min-width: 680px) {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  .welcome-contenair {
+    margin-top: 2rem;
+  }
+  .content {
+    background-color: $colorWhiteTrans;
+    box-shadow: $shadow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 1rem 12px;
+    margin: 5px 1rem;
+    .registerBtn {
+      margin-top: 0.5rem;
+    }
+    .no-registed {
+      font-size: 0.7rem;
+    }
+  }
+}

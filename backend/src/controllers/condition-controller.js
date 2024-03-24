@@ -1,8 +1,8 @@
-import ConditionService from "../services/condition-service";
+import { conditionService } from "../services";
 
 export default class {
   constructor() {
-    this.service = new ConditionService();
+    this.service = conditionService;
   }
 
   create = async (req, res, next) => {

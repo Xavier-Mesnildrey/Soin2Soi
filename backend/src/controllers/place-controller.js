@@ -1,8 +1,8 @@
-import PlaceService from "../services/place-service";
+import { placeService } from "../services";
 
 export default class {
   constructor() {
-    this.service = new PlaceService();
+    this.service = placeService;
   }
 
   create = async (req, res, next) => {

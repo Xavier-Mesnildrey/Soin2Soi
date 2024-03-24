@@ -1,15 +1,15 @@
 import { Router } from "express";
-import UserController from "../controllers/user-controller";
-
-const userController = new UserController();
+import { userController, authController } from "../controllers";
+import { authService } from "../services";
 
 const router = Router();
 
 // users
-router.post("/users", userController.create);
-router.get("/users", userController.findAll);
-router.get("/users/:id", userController.findOne);
-router.put("/users/:id", userController.updateOne);
-router.delete("/users/:id", userController.deleteOne);
+// Normalement on appel seulement les middlewares ou les fonctions de service, pas d'autres controllers
+router.post("/register", userController.create, authController.signIn);
+router.get("/users", authService.validate, userController.findAll);
+router.get("/users/:id", authService.validate, userController.findOne);
+router.put("/users/:id", authService.validate, userController.updateOne);
+router.delete("/users/:id", authService.validate, userController.deleteOne);
 
 export default router;

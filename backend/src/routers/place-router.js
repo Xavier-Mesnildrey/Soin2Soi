@@ -1,15 +1,14 @@
 import { Router } from "express";
-import PlaceController from "../controllers/place-controller";
-
-const placeController = new PlaceController();
+import { placeController } from "../controllers";
+import { authService } from "../services";
 
 const router = Router();
 
 // places
-router.post("/place", placeController.create);
-router.get("/places", placeController.findAll);
-router.get("/places/:id", placeController.findOne);
-router.put("/places/:id", placeController.updateOne);
-router.delete("/places/:id", placeController.deleteOne);
+router.post("/place", authService.validate, placeController.create);
+router.get("/places", authService.validate, placeController.findAll);
+router.get("/places/:id", authService.validate, placeController.findOne);
+router.put("/places/:id", authService.validate, placeController.updateOne);
+router.delete("/places/:id", authService.validate, placeController.deleteOne);
 
 export default router;

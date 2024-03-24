@@ -17,9 +17,25 @@ export default class {
     return results;
   }
 
-  async findAll() {
-    const results = await this.client.cares.findAll();
-    return results;
+  async findAll(conditionId, cityId) {
+    const conditionIdParsed = parseInt(conditionId, 10);
+    const cityIdParsed = parseInt(cityId, 10);
+
+    const results = await this.client.cares.findAll(
+      conditionIdParsed,
+      cityIdParsed
+    );
+
+    // "nom1,nom2,nom3" => [nom1 , nom2 , nom3]
+    const formatedResults = results.map(
+      ({ placeNames, placeDescriptions, ...rest }) => ({
+        ...rest,
+        placeNames: placeNames.split(","),
+        placeDescriptions: placeDescriptions.split(","),
+      })
+    );
+
+    return formatedResults;
   }
 
   // Update cares

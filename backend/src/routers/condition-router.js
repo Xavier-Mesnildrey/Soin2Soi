@@ -1,15 +1,26 @@
 import { Router } from "express";
-import ConditionController from "../controllers/condition-controller";
-
-const conditionController = new ConditionController();
+import { conditionController } from "../controllers";
+import { authService } from "../services";
 
 const router = Router();
 
 // conditions
-router.post("/conditions", conditionController.create);
-router.get("/conditions", conditionController.findAll);
-router.get("/conditions/:id", conditionController.findOne);
-router.put("/conditions/:id", conditionController.updateOne);
-router.delete("/conditions/:id", conditionController.deleteOne);
+router.post("/conditions", authService.validate, conditionController.create);
+router.get("/conditions", authService.validate, conditionController.findAll);
+router.get(
+  "/conditions/:id",
+  authService.validate,
+  conditionController.findOne
+);
+router.put(
+  "/conditions/:id",
+  authService.validate,
+  conditionController.updateOne
+);
+router.delete(
+  "/conditions/:id",
+  authService.validate,
+  conditionController.deleteOne
+);
 
 export default router;

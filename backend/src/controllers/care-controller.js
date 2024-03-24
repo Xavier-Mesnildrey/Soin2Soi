@@ -1,8 +1,8 @@
-import CareService from "../services/care-service";
+import { careService } from "../services";
 
 export default class {
   constructor() {
-    this.service = new CareService();
+    this.service = careService;
   }
 
   create = async (req, res, next) => {
@@ -12,8 +12,13 @@ export default class {
     return res.status(201).json({ id });
   };
 
-  findAll = async (_req, res, next) => {
-    const cares = await this.service.findAll().catch((err) => next(err));
+  // Nous n'utilisons que celui la pour le site
+  findAll = async (req, res, next) => {
+    const { conditionId, cityId } = req.query;
+
+    const cares = await this.service
+      .findAll(conditionId, cityId)
+      .catch((err) => next(err));
     return res.json(cares);
   };
 

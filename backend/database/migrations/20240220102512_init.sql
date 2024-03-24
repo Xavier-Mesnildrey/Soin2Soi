@@ -1,8 +1,9 @@
 CREATE TABLE `users` (
   `id` varchar(255) PRIMARY KEY default(uuid()),
   `username` varchar(255),
-  `mail` varchar(255),
-  `password` varchar(255)
+  `email` varchar(255),
+  `password` varchar(255),
+  UNIQUE (email)
 );
 
 CREATE TABLE `conditions` (

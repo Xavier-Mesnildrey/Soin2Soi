@@ -1,0 +1,26 @@
+@import "../../assets/variables.scss";
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  
+
+  @media screen and (min-width: 680px) {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+
+  .content {
+    background-color: $colorWhiteTrans;
+    box-shadow: $shadow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 1rem 12px;
+    margin: 5px 1rem;
+  }
+}
